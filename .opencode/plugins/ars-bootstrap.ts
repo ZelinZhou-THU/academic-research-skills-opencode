@@ -31,13 +31,8 @@ Token budget reference: docs/PERFORMANCE.md (a single full pipeline run â‰ˆ $4â€
 export default (async () => {
   return {
     "experimental.chat.system.transform": async (_input: any, output: any) => {
-      if (typeof output.system === "string") {
-        output.system += "\n\n" + ARS_ANNOUNCE;
-      } else if (Array.isArray(output.system)) {
-        output.system.push({
-          type: "text",
-          text: ARS_ANNOUNCE,
-        });
+      if (Array.isArray(output.system)) {
+        output.system.push(ARS_ANNOUNCE);
       }
     },
   };
