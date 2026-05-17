@@ -1,6 +1,6 @@
 {
   "name": "academic-research-skills",
-  "version": "3.8.1",
+  "version": "3.8.2",
   "description": "Production-grade academic research pipeline for OpenCode: research → write → review → revise → finalize. 4 skills, 25 modes, 37-agent ensemble.",
   "type": "module",
   "main": ".opencode/plugins/ars-bootstrap.ts",
