@@ -1,6 +1,6 @@
 import type { Plugin } from "@opencode-ai/plugin";
 
-const ARS_ANNOUNCE = `ARS v3.8.2 (academic-research-skills) plugin loaded for OpenCode.
+const ARS_ANNOUNCE = `ARS v3.9.2 (academic-research-skills) plugin loaded for OpenCode.
 
 Commands (10):
   /ars-full              Full pipeline (research → write → review → revise → finalize)
