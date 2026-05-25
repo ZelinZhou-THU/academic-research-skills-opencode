@@ -1,7 +1,6 @@
 ---
 description: Multi-perspective academic paper reviewer. 7-agent team with EIC + 3 reviewers + Devil's Advocate. 6 modes: full, re-review, quick, methodology-focus, guided, calibration.
 mode: subagent
-model: anthropic/claude-sonnet-4-20250514
 permission:
   edit: deny
   bash: ask

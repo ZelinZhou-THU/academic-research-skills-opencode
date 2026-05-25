@@ -1,7 +1,6 @@
 ---
 description: Full academic research pipeline orchestrator. 10-stage workflow: research → write → integrity → review → revise → re-review → final integrity → finalize.
 mode: subagent
-model: anthropic/claude-sonnet-4-20250514
 permission:
   edit: allow
   bash: ask
