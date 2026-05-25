@@ -12,77 +12,63 @@
     "ars-full": {
       "template": "Trigger the academic-pipeline orchestrator. Execute the complete academic research workflow: deep-research → academic-paper → integrity verification → academic-paper-reviewer → revision → re-review → final integrity → finalize. Load the academic-pipeline skill and follow its full pipeline orchestration.\n\nMode reference: MODE_REGISTRY.md § academic-pipeline.\nSkill entry: academic-pipeline/SKILL.md.",
       "description": "ARS full pipeline — research → write → review → revise → finalize",
-      "model": "anthropic/claude-sonnet-4-20250514"
     },
     "ars-plan": {
       "template": "Trigger the academic-paper skill in plan mode. Produce a Chapter Plan + INSIGHT collection through Socratic dialogue with the user. Originality-spectrum, very-high oversight.\n\nMode reference: MODE_REGISTRY.md § academic-paper.\nSkill entry: academic-paper/SKILL.md.",
       "description": "ARS academic-paper plan mode — Socratic chapter-by-chapter planning",
-      "model": "anthropic/claude-sonnet-4-20250514"
     },
     "ars-outline": {
       "template": "Trigger the academic-paper skill in outline-only mode. Produce a detailed paper outline with evidence map, no full draft. Balanced spectrum, high oversight.\n\nMode reference: MODE_REGISTRY.md § academic-paper.\nSkill entry: academic-paper/SKILL.md.",
       "description": "ARS academic-paper outline-only mode — detailed outline + evidence map",
-      "model": "anthropic/claude-sonnet-4-20250514"
     },
     "ars-revision": {
       "template": "Trigger the academic-paper skill in revision mode. Produce a revised draft plus point-by-point response-to-reviewers. Fidelity spectrum, high oversight.\n\nMode reference: MODE_REGISTRY.md § academic-paper.\nSkill entry: academic-paper/SKILL.md.",
       "description": "ARS academic-paper revision mode — revised draft + R&R responses",
-      "model": "anthropic/claude-sonnet-4-20250514"
     },
     "ars-revision-coach": {
       "template": "Trigger the academic-paper skill in revision-coach mode. Parse reviewer comments and produce a Revision Roadmap plus a Response Letter skeleton, without writing the revision itself. Balanced spectrum, medium oversight.\n\nMode reference: MODE_REGISTRY.md § academic-paper.\nSkill entry: academic-paper/SKILL.md.",
       "description": "ARS academic-paper revision-coach mode — Revision Roadmap + Response Letter Skeleton",
-      "model": "anthropic/claude-sonnet-4-20250514"
     },
     "ars-abstract": {
       "template": "Trigger the academic-paper skill in abstract-only mode. Produce a bilingual (zh-TW + EN) abstract plus keywords. Fidelity spectrum, medium oversight.\n\nMode reference: MODE_REGISTRY.md § academic-paper.\nSkill entry: academic-paper/SKILL.md.",
       "description": "ARS academic-paper abstract-only mode — bilingual abstract + keywords",
-      "model": "anthropic/claude-sonnet-4-20250514"
     },
     "ars-lit-review": {
       "template": "Trigger the academic-paper skill in lit-review mode. Produce an annotated bibliography rendered as a literature review section. Fidelity spectrum, medium oversight.\n\nMode reference: MODE_REGISTRY.md § academic-paper.\nSkill entry: academic-paper/SKILL.md.",
       "description": "ARS academic-paper lit-review mode — annotated bibliography in paper format",
-      "model": "anthropic/claude-sonnet-4-20250514"
     },
     "ars-format-convert": {
       "template": "Trigger the academic-paper skill in format-convert mode. Convert a paper between LaTeX, DOCX (via Pandoc), PDF, or Markdown, and convert citation styles between major formats. Fidelity spectrum, low oversight.\n\nMode reference: MODE_REGISTRY.md § academic-paper.\nSkill entry: academic-paper/SKILL.md.",
       "description": "ARS academic-paper format-convert mode — convert to LaTeX / DOCX / PDF / Markdown",
-      "model": "anthropic/claude-sonnet-4-20250514"
     },
     "ars-citation-check": {
       "template": "Trigger the academic-paper skill in citation-check mode. Produce a citation error report (missing references, mismatched in-text citations, format errors). Fidelity spectrum, low oversight.\n\nMode reference: MODE_REGISTRY.md § academic-paper.\nSkill entry: academic-paper/SKILL.md.",
       "description": "ARS academic-paper citation-check mode — citation error report",
-      "model": "anthropic/claude-sonnet-4-20250514"
     },
     "ars-disclosure": {
       "template": "Trigger the academic-paper skill in disclosure mode. Produce a venue-specific AI-usage disclosure statement (ICLR / NeurIPS / Nature / Science / ACL / EMNLP supported). Fidelity spectrum, low oversight.\n\nMode reference: MODE_REGISTRY.md § academic-paper.\nSkill entry: academic-paper/SKILL.md.",
       "description": "ARS academic-paper disclosure mode — venue-specific AI-usage statement",
-      "model": "anthropic/claude-sonnet-4-20250514"
     }
   },
   "agent": {
     "ars-researcher": {
       "description": "Deep research agent team. 13-agent pipeline for rigorous academic research. 7 modes: full, quick, socratic, review, lit-review, fact-check, systematic-review.",
       "mode": "subagent",
-      "model": "anthropic/claude-sonnet-4-20250514",
       "permission": { "edit": "deny", "bash": "ask" }
     },
     "ars-writer": {
       "description": "Academic paper writing agent team. 12-agent pipeline for paper writing. 10 modes: full, plan, outline-only, revision, revision-coach, abstract-only, lit-review, format-convert, citation-check, disclosure.",
       "mode": "subagent",
-      "model": "anthropic/claude-sonnet-4-20250514",
       "permission": { "edit": "allow", "bash": "ask" }
     },
     "ars-reviewer": {
       "description": "Multi-perspective academic paper reviewer. 7-agent team with EIC + 3 reviewers + Devil's Advocate. 6 modes: full, re-review, quick, methodology-focus, guided, calibration.",
       "mode": "subagent",
-      "model": "anthropic/claude-sonnet-4-20250514",
       "permission": { "edit": "deny", "bash": "ask" }
     },
     "ars-pipeline": {
       "description": "Full academic research pipeline orchestrator. 10-stage workflow: research → write → integrity → review → revise → re-review → final integrity → finalize.",
       "mode": "subagent",
-      "model": "anthropic/claude-sonnet-4-20250514",
       "permission": { "edit": "allow", "bash": "ask" }
     }
   }

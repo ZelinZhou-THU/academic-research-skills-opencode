@@ -1,7 +1,6 @@
 ---
 description: Academic paper writing agent team. 12-agent pipeline for paper writing. 10 modes: full, plan, outline-only, revision, revision-coach, abstract-only, lit-review, format-convert, citation-check, disclosure.
 mode: subagent
-model: anthropic/claude-sonnet-4-20250514
 permission:
   edit: allow
   bash: ask

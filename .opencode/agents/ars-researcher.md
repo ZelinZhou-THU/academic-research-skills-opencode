@@ -1,7 +1,6 @@
 ---
 description: Deep research agent team. 13-agent pipeline for rigorous academic research. 7 modes: full, quick, socratic, review, lit-review, fact-check, systematic-review.
 mode: subagent
-model: anthropic/claude-sonnet-4-20250514
 permission:
   edit: deny
   bash: ask
